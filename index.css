@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.header {
+  width: 100%;
+  height: 400px;
+  background: url(imagens/foto-1.svg) no-repeat;
+  background-size: cover;
+  border-radius: 1px;
+  -webkit-box-shadow: inset 2px 3px 19px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 2px 3px 19px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 2px 3px 19px -6px rgba(0, 0, 0, 0.75);
+}
+
+.main-header {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.main-header h1 {
+  font-size: 2em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-bottom: 1.5em;
+}
+
+.main-header p {
+  font-size: 1.3em;
+  color: #ffffff;
+}
+/**/
+
+.main-content {
+  width: 100%;
+  height: auto;
+}
+
+.main-section {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+fieldset {
+  border: none;
+  padding-top: 2em;
+}
+
+#second {
+  margin-bottom: 1em;
+}
+
+label {
+  display: block;
+  margin-left: 2.5em;
+  padding-bottom: 5px;
+  color: #000;
+}
+
+input {
+  display: block;
+  width: 300px;
+  height: 40px;
+  margin-left: 3em;
+  border: 1px solid #c7c7c7;
+  background: #ededed;
+}
+
+button {
+  width: 300px;
+  padding: 10px;
+  margin: 0 0 0 3em;
+  border: none;
+  border-radius: 4px;
+  background-color: #5200ff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    height: 650px;
+    background: url(imagens/foto.svg) no-repeat;
+    background-size: cover;
+  }
+  .main-header {
+    padding-top: 10em;
+  }
+  .main-header h1 {
+    font-size: 3em;
+  }
+  .main-section {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "header main";
+  }
+  .header {
+    height: auto;
+    grid-area: header;
+    background: url(imagens/foto2.svg) no-repeat;
+    background-size: cover;
+  }
+
+  .main-content {
+    grid-area: main;
+  }
+  .main-section {
+    padding-top: 10em;
+  }
+}
